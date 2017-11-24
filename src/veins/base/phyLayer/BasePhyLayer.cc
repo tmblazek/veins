@@ -716,8 +716,7 @@ void BasePhyLayer::sendMacPktUp(cMessage* pkt) {
 }
 
 void BasePhyLayer::sendMessageDown(AirFrame* msg) {
-
-	sendToChannel(msg);
+    	sendToChannel(msg);
 }
 
 void BasePhyLayer::sendSelfMessage(cMessage* msg, simtime_t_cref time) {

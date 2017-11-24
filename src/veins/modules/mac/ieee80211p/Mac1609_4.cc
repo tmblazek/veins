@@ -225,6 +225,7 @@ void Mac1609_4::handleSelfMsg(cMessage* msg) {
 			MacToPhyControlInfo* phyInfo = dynamic_cast<MacToPhyControlInfo*>(mac->getControlInfo());
 			assert(phyInfo);
 			DBG_MAC << "Sending a Packet. Frequency " << freq << " Priority" << lastAC << std::endl;
+			// EV_INFO << "[SIMDAT] " << simTime() << " : " <<this->getFullPath() << ": tx" << std::endl;
 			sendDelayed(mac, RADIODELAY_11P, lowerLayerOut);
 			statsSentPackets++;
 		}
